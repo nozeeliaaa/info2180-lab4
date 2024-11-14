@@ -79,7 +79,7 @@ if ($hero == ""):
 
 else:
    foreach ($superheroes as $superhero):
-       if ($superhero['alias'] == $hero or $superhero['name'] == $hero):
+       if ($superhero['alias'] == $hero or $superhero['name'] === $hero):
            $search = "true";
            ?><h3><?= $superhero['alias']; ?></h3>
            <h4> A.K.A <?= $superhero['name']; ?></h4>
