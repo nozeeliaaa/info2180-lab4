@@ -33,4 +33,12 @@ window.onload = function() {
    console.log("Page successfully loaded");
    var  but = document.getElementById("searchBtn");
    but.addEventListener("click", searchList);
+
+   var userInput = document.getElementById("userinput");
+   userInput.addEventListener("keypress", function(event) {
+       if (event.key === "Enter") {  // Check if Enter key is pressed
+           event.preventDefault();    // Prevent form submission if any
+           searchList();              // Trigger the search function
+       }
+   });
  };
